@@ -1,0 +1,1018 @@
+{
+	"info": {
+		"_postman_id": "f8d4bce8-cfc0-4124-b635-1845a516d41f",
+		"name": "socialNetworkTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Request OTP To Phone Or Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/accounts/otp?receiver=09109276090&channel=phone",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"otp"
+							],
+							"query": [
+								{
+									"key": "receiver",
+									"value": "09109276090"
+								},
+								{
+									"key": "channel",
+									"value": "phone"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Request OTP To Phone Or Email",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/accounts/otp?receiver=09109276090&channel=phone",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"accounts",
+										"otp"
+									],
+									"query": [
+										{
+											"key": "receiver",
+											"value": "09109276090"
+										},
+										{
+											"key": "channel",
+											"value": "phone"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 18 Nov 2022 15:32:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"request_id\": \"77558ff6-fe03-4ebd-b59f-ab6b1a4f4676\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Request OTP Verification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"receiver\": \"09109276090\",\n    \"request_id\": \"77558ff6-fe03-4ebd-b59f-ab6b1a4f4676\",\n    \"password\": 25818\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/accounts/otp/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"otp",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Request OTP Verification",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"receiver\": \"09109276090\",\n    \"request_id\": \"77558ff6-fe03-4ebd-b59f-ab6b1a4f4676\",\n    \"password\": 25818\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/accounts/otp/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"accounts",
+										"otp",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 18 Nov 2022 15:33:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "499"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTU4Mzg0LCJpYXQiOjE2Njg3ODU1ODQsImp0aSI6IjIyMDkxYjEyMGQ0NjQ2MTBiYmMzMWI4NDkyZTUzZmM4IiwidXNlcl9pZCI6MTF9.9u8FusGdVD6N3WR39UtQvYnoor6_69v1DUlgLd1vAoA\",\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2ODk1ODM4NCwiaWF0IjoxNjY4Nzg1NTg0LCJqdGkiOiI5ZGY1Y2NhOGJmZDU0MTBmYmEzNTdkZTZmZTIwMzk3NiIsInVzZXJfaWQiOjExfQ.I6PQ1iFaONDSwLnZZFQeFcE17cjfOulemOmtsmeiyXM\",\n    \"joined\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Social App",
+			"item": [
+				{
+					"name": "Search(List) All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTU4NDUxLCJpYXQiOjE2Njg3ODU2NTEsImp0aSI6IjhhN2M0OTQwNjczYjRmMjg5YzJjOGU3NGU5YmZjMGNmIiwidXNlcl9pZCI6MTJ9.WUXP5lKWDKcgPAXSaQTzCO4MySE2gCT73xZY3FzgULI",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/socialapp/users/list/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"socialapp",
+								"users",
+								"list",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search(List) All Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTU4NDUxLCJpYXQiOjE2Njg3ODU2NTEsImp0aSI6IjhhN2M0OTQwNjczYjRmMjg5YzJjOGU3NGU5YmZjMGNmIiwidXNlcl9pZCI6MTJ9.WUXP5lKWDKcgPAXSaQTzCO4MySE2gCT73xZY3FzgULI",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/socialapp/users/list/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"socialapp",
+										"users",
+										"list",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 18 Nov 2022 15:35:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "192"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"username\": \"admin\",\n        \"first_name\": \"\",\n        \"last_name\": \"\"\n    },\n    {\n        \"id\": 11,\n        \"username\": \"09109276090\",\n        \"first_name\": \"\",\n        \"last_name\": \"\"\n    },\n    {\n        \"id\": 12,\n        \"username\": \"09129680827\",\n        \"first_name\": \"\",\n        \"last_name\": \"\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Retrieve Users Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTU4NDUxLCJpYXQiOjE2Njg3ODU2NTEsImp0aSI6IjhhN2M0OTQwNjczYjRmMjg5YzJjOGU3NGU5YmZjMGNmIiwidXNlcl9pZCI6MTJ9.WUXP5lKWDKcgPAXSaQTzCO4MySE2gCT73xZY3FzgULI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 11\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/socialapp/users/profile/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"socialapp",
+								"users",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retrieve Users Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTU4NDUxLCJpYXQiOjE2Njg3ODU2NTEsImp0aSI6IjhhN2M0OTQwNjczYjRmMjg5YzJjOGU3NGU5YmZjMGNmIiwidXNlcl9pZCI6MTJ9.WUXP5lKWDKcgPAXSaQTzCO4MySE2gCT73xZY3FzgULI",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": 11\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/socialapp/users/profile/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"socialapp",
+										"users",
+										"profile",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 18 Nov 2022 15:41:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "440"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"profile retrieve successfully for wanted user\",\n    \"profile\": {\n        \"user\": \"09109276090\",\n        \"posts\": [\n            {\n                \"post_uuid\": \"28722920-6114-44f0-8cb8-c569b3041b1a\",\n                \"text\": \"user 910 third  post post\",\n                \"comments\": [],\n                \"likes\": []\n            },\n            {\n                \"post_uuid\": \"21fd1c9c-af7b-4e62-a64b-55fdf715e114\",\n                \"text\": \"user 910 second post post\",\n                \"comments\": [],\n                \"likes\": []\n            },\n            {\n                \"post_uuid\": \"10376547-6967-456b-963b-5ff6bff7bf63\",\n                \"text\": \"user 910 first post post\",\n                \"comments\": [],\n                \"likes\": []\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve My Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODk2NzA2LCJpYXQiOjE2Njg3MjM5MDYsImp0aSI6ImEwMjRmNTA0NjMzODRlMjliNzEzN2FkYTAwMzI2N2JkIiwidXNlcl9pZCI6OH0.akN87V2CMY8Z4ftyqLe3CbVZWjGYQ1mV_pBS4FTJAb4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/socialapp/my/profile/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"socialapp",
+								"my",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retrieve My Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODk2NzA2LCJpYXQiOjE2Njg3MjM5MDYsImp0aSI6ImEwMjRmNTA0NjMzODRlMjliNzEzN2FkYTAwMzI2N2JkIiwidXNlcl9pZCI6OH0.akN87V2CMY8Z4ftyqLe3CbVZWjGYQ1mV_pBS4FTJAb4",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/socialapp/my/profile/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"socialapp",
+										"my",
+										"profile",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 17 Nov 2022 23:31:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"your profile retrieve successfully\",\n    \"profile\": {\n        \"user\": \"09109276090\",\n        \"posts\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODk2NzA2LCJpYXQiOjE2Njg3MjM5MDYsImp0aSI6ImEwMjRmNTA0NjMzODRlMjliNzEzN2FkYTAwMzI2N2JkIiwidXNlcl9pZCI6OH0.akN87V2CMY8Z4ftyqLe3CbVZWjGYQ1mV_pBS4FTJAb4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"this is my third post\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/socialapp/create/post/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"socialapp",
+								"create",
+								"post",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODk2NzA2LCJpYXQiOjE2Njg3MjM5MDYsImp0aSI6ImEwMjRmNTA0NjMzODRlMjliNzEzN2FkYTAwMzI2N2JkIiwidXNlcl9pZCI6OH0.akN87V2CMY8Z4ftyqLe3CbVZWjGYQ1mV_pBS4FTJAb4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"text\": \"this is my third post\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/socialapp/create/post/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"socialapp",
+										"create",
+										"post",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 18 Nov 2022 00:29:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"post created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTU4NDUxLCJpYXQiOjE2Njg3ODU2NTEsImp0aSI6IjhhN2M0OTQwNjczYjRmMjg5YzJjOGU3NGU5YmZjMGNmIiwidXNlcl9pZCI6MTJ9.WUXP5lKWDKcgPAXSaQTzCO4MySE2gCT73xZY3FzgULI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"user 912 comment for 910 post\",\n    \"commentee_id\": 11,\n    \"commentee_post_id\": \"28722920-6114-44f0-8cb8-c569b3041b1a\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/socialapp/create/comment/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"socialapp",
+								"create",
+								"comment",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Comment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTU4NDUxLCJpYXQiOjE2Njg3ODU2NTEsImp0aSI6IjhhN2M0OTQwNjczYjRmMjg5YzJjOGU3NGU5YmZjMGNmIiwidXNlcl9pZCI6MTJ9.WUXP5lKWDKcgPAXSaQTzCO4MySE2gCT73xZY3FzgULI",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"text\": \"user 912 comment for 910 post\",\n    \"commentee_id\": 11,\n    \"commentee_post_id\": \"28722920-6114-44f0-8cb8-c569b3041b1a\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/socialapp/create/comment/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"socialapp",
+										"create",
+										"comment",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 18 Nov 2022 15:45:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"comment created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Like Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTU4NDUxLCJpYXQiOjE2Njg3ODU2NTEsImp0aSI6IjhhN2M0OTQwNjczYjRmMjg5YzJjOGU3NGU5YmZjMGNmIiwidXNlcl9pZCI6MTJ9.WUXP5lKWDKcgPAXSaQTzCO4MySE2gCT73xZY3FzgULI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"likee_id\": 11,\n    \"likee_post_id\": \"10376547-6967-456b-963b-5ff6bff7bf63\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/socialapp/like/post/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"socialapp",
+								"like",
+								"post",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Like Post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTU4NDUxLCJpYXQiOjE2Njg3ODU2NTEsImp0aSI6IjhhN2M0OTQwNjczYjRmMjg5YzJjOGU3NGU5YmZjMGNmIiwidXNlcl9pZCI6MTJ9.WUXP5lKWDKcgPAXSaQTzCO4MySE2gCT73xZY3FzgULI",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"likee_id\": 11,\n    \"likee_post_id\": \"10376547-6967-456b-963b-5ff6bff7bf63\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/socialapp/like/post/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"socialapp",
+										"like",
+										"post",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 18 Nov 2022 15:48:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"you liked post successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
