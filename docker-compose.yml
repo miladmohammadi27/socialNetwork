@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  social_network_django:
+    build: ./django-api
+    container_name: social_network_django
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./django-api/:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+      - DJANGO_ALLOWED_HOSTS=*
+
+  social_network_mongo:
+    image: 'mongo'
+    container_name: 'social_network_mongo'
+    environment:
+      - MONGO_INITDB_DATABASE=social
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+    volumes:
+      - ./mongoDB/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./mongoDB/mongo-volume:/data/db
+    ports:
+      - '27017:27017'
+
+
+
+
+
+
+
+
